@@ -33,10 +33,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
-              <Component id="jPanel1" min="-2" pref="706" max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="1" pref="712" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -129,7 +126,7 @@
                               <Component id="jButton1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jButton2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="8" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
@@ -171,7 +168,7 @@
                       </Group>
                       <Component id="jScrollPane1" alignment="0" min="-2" pref="487" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="9" max="32767" attributes="0"/>
               </Group>
               <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
           </Group>
@@ -195,10 +192,10 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="16" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel12" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
-                                  <Component id="jLabel15" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
-                                  <Component id="jLabel13" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
-                                  <Component id="jLabel11" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
+                                  <Component id="btndoctors" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
+                                  <Component id="btnpatients" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
+                                  <Component id="btnappointments" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
+                                  <Component id="btnrooms" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -210,13 +207,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-                      <Component id="jLabel12" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="btndoctors" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                      <Component id="jLabel11" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="btnrooms" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                      <Component id="jLabel13" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="btnappointments" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                      <Component id="jLabel15" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="btnpatients" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="logoutbtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
@@ -225,7 +222,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel11">
+            <Component class="javax.swing.JLabel" name="btnrooms">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="20" style="1"/>
@@ -235,8 +232,11 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Rooms"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnroomsMouseClicked"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
+            <Component class="javax.swing.JLabel" name="btndoctors">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="20" style="1"/>
@@ -246,8 +246,11 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Doctors"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btndoctorsMouseClicked"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel13">
+            <Component class="javax.swing.JLabel" name="btnappointments">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="20" style="1"/>
@@ -257,6 +260,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Appointments"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnappointmentsMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="logoutbtn">
               <Properties>
@@ -273,7 +279,7 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="logoutbtnMouseClicked"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel15">
+            <Component class="javax.swing.JLabel" name="btnpatients">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="20" style="1"/>
@@ -283,6 +289,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Patients"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnpatientsMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
